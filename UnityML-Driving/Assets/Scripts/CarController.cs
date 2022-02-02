@@ -17,6 +17,9 @@ public class CarController : MonoBehaviour
     [SerializeField] private float breakForce;
     [SerializeField] private float maxSteeringAngle;
 
+    public Direction CurrentDirection { get; set; } = Direction.Idle;
+    public bool IsAutonomous { get; set; } = false;
+
     //colliders
     [SerializeField] private WheelCollider frontLeftWheelCollider;
     [SerializeField] private WheelCollider frontRightWheelCollider;
@@ -28,7 +31,14 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform frontRightWheelTransform;
     [SerializeField] private Transform rearLeftWheelTransform;
     [SerializeField] private Transform rearRightWheelTransform;
-
+    public enum Direction
+    {
+        Idle,
+        MoveForward,
+        MoveBackward,
+        TurnLeft,
+        TurnRight
+    }
     private void FixedUpdate()
     {
         GetInput();
