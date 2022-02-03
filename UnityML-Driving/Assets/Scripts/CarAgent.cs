@@ -4,7 +4,7 @@ using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Policies;
 using static CarController;
 
-public class CarAgent : MonoBehaviour
+public class CarAgent : Agent
 {
     private Vector3 originalPosition;
 
@@ -94,7 +94,7 @@ public class CarAgent : MonoBehaviour
 
         if (isFinal)
         {
-            StartCoroutine(SwapGroundMaterial(successMaterial, 0.5f));
+            //StartCoroutine(SwapGroundMaterial(successMaterial, 0.5f));
 
             EndEpisode();
         }
@@ -102,7 +102,7 @@ public class CarAgent : MonoBehaviour
 
     public void TakeAwayPoints()
     {
-        StartCoroutine(SwapGroundMaterial(failureMaterial, 0.5f));
+        //StartCoroutine(SwapGroundMaterial(failureMaterial, 0.5f));
 
         AddReward(-0.01f);
 
