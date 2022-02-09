@@ -1155,7 +1155,7 @@ MonoBehaviour:
   m_BrainParameters:
     VectorObservationSize: 9
     NumStackedVectorObservations: 1
-    VectorActionSize: 04000000
+    VectorActionSize: 0200000003000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
   m_Model: {fileID: 0}
@@ -1176,6 +1176,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7db70f10b04a45b44a9af2b6b58c17ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 5
+--- !u!114 &742901821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742901816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
 --- !u!1001 &791164437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1674,6 +1692,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5098e6e134974e64dafd8e7a3a6fcea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carGoalPrefab: {fileID: 0}
+  howManyCarsTohide: 1
 --- !u!65 &1345162439
 BoxCollider:
   m_ObjectHideFlags: 0
