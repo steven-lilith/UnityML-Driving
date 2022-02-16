@@ -28,7 +28,7 @@ public class CarGoal : MonoBehaviour
             if (goalType == GoalType.Milestone)
             {
                 HasCarUsedIt = true;
-                agent.GivePoints(goalReward);
+                //agent.GivePoints(goalReward);
             }
             else
             {
@@ -36,11 +36,11 @@ public class CarGoal : MonoBehaviour
                 if (Mathf.Abs(agent.transform.rotation.y) <= goalMinRotation || !enforceGoalMinRotation)
                 {
                     HasCarUsedIt = true;
-                    agent.GivePoints(goalReward, true);
+                    //agent.GivePoints(goalReward, true);
                 }
                 else
                 {
-                    agent.TakeAwayPoints();
+                    //agent.TakeAwayPoints();
                 }
             }
         }
