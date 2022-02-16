@@ -54,19 +54,9 @@ public class CarController : MonoBehaviour
     }
     private void HandleMotor()
     {
-        if (CurrentDirection == Direction.MoveForward&& IsAutonomous)
-        {
-            rearLeftWheelCollider.motorTorque = verticalInput * motorForce;
-            rearRightWheelCollider.motorTorque = verticalInput * motorForce;
-        }
-        if (CurrentDirection == Direction.MoveBackward && IsAutonomous)
-        {
-            rearLeftWheelCollider.motorTorque = verticalInput * -motorForce;
-            rearRightWheelCollider.motorTorque = verticalInput * -motorForce;
-        }
-
+        frontLeftWheelCollider.motorTorque = verticalInput * motorForce;
+        frontRightWheelCollider.motorTorque = verticalInput * motorForce;
         currentbreakForce = isBreaking ? breakForce : 0f;
-
         if (isBreaking)
         {
             ApplyBreaking();
@@ -74,13 +64,9 @@ public class CarController : MonoBehaviour
     }
     private void Steering()
     {
-        if (CurrentDirection==Direction.TurnLeft || CurrentDirection==Direction.TurnRight)
-        {
-            currentSteerAngle = maxSteeringAngle * horizontalInput;
-            frontLeftWheelCollider.steerAngle = currentSteerAngle;
-            frontRightWheelCollider.steerAngle = currentSteerAngle;
-        }
-       
+        currentSteerAngle = maxSteeringAngle * horizontalInput;
+        frontLeftWheelCollider.steerAngle = currentSteerAngle;
+        frontRightWheelCollider.steerAngle = currentSteerAngle;
     }
     private void ApplyBreaking()
     {

@@ -35,20 +35,20 @@ public class CarAgent : Agent
     private void ResetParkingLotArea()
     {
         // important to set car to automonous during default behavior
-        carController.IsAutonomous = behaviorParameters.BehaviorType == BehaviorType.Default;
-        transform.localPosition = originalPosition;
-        transform.localRotation = Quaternion.identity;
-        carControllerRigidBody.velocity = Vector3.zero;
-        carControllerRigidBody.angularVelocity = Vector3.zero;
+        //carController.IsAutonomous = behaviorParameters.BehaviorType == BehaviorType.Default;
+        //transform.localPosition = originalPosition;
+        //transform.localRotation = Quaternion.identity;
+        //carControllerRigidBody.velocity = Vector3.zero;
+        //carControllerRigidBody.angularVelocity = Vector3.zero;
 
     }
 
     void Update()
     {
-        //if (transform.localPosition.y <= 0)
-        //{
-        //    TakeAwayPoints();
-        //}
+        if (transform.localPosition.y <= 0)
+        {
+            TakeAwayPoints();
+        }
     }
 
     public void CollectObservations(VectorSensor sensor)
@@ -64,30 +64,24 @@ public class CarAgent : Agent
 
     public void OnActionReceived(float[] vectorAction)
     {
-
         var direction = Mathf.FloorToInt(vectorAction[0]);
 
         switch (direction)
         {
             case 0: // idle
                 carController.CurrentDirection = Direction.Idle;
-                Debug.Log("0");
                 break;
             case 1: // forward
                 carController.CurrentDirection = Direction.MoveForward;
-                Debug.Log("1");
                 break;
             case 2: // backward
                 carController.CurrentDirection = Direction.MoveBackward;
-                Debug.Log("2");
                 break;
             case 3: // turn left
                 carController.CurrentDirection = Direction.TurnLeft;
-                Debug.Log("3");
                 break;
             case 4: // turn right
                 carController.CurrentDirection = Direction.TurnRight;
-                Debug.Log("4");
                 break;
         }
 
@@ -100,7 +94,7 @@ public class CarAgent : Agent
 
         if (isFinal)
         {
-           // StartCoroutine(SwapGroundMaterial(successMaterial, 0.5f));
+            //StartCoroutine(SwapGroundMaterial(successMaterial, 0.5f));
 
             EndEpisode();
         }
