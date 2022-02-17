@@ -34,6 +34,9 @@ public class DrivingAgent : Agent
         continuousActions[0] = Input.GetAxisRaw("Vertical");
         continuousActions[1] = Input.GetAxisRaw("Horizontal");
         continuousActions[2] = Input.GetAxisRaw("Horizontal");
+        Debug.Log(continuousActions[0]);
+        Debug.Log(continuousActions[1]);
+        Debug.Log(continuousActions[2]);
 
     }
 

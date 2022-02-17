@@ -209,21 +209,22 @@ public class PrometeoCarController : MonoBehaviour
       A (turn left), D (turn right) or Space bar (handbrake).
       */
 
-      if(Input.GetKey(KeyCode.W)){
+      if(Input.GetAxisRaw("Vertical") > 0){
         CancelInvoke("DecelerateCar");
         deceleratingCar = false;
         GoForward();
       }
-      if(Input.GetKey(KeyCode.S)){
+      if(Input.GetAxisRaw("Vertical") < 0){
         CancelInvoke("DecelerateCar");
         deceleratingCar = false;
         GoReverse();
       }
 
-      if(Input.GetKey(KeyCode.A)){
+      if(Input.GetAxisRaw("Horizontal")<0){
         TurnLeft();
       }
-      if(Input.GetKey(KeyCode.D)){
+      if(Input.GetAxisRaw("Horizontal") > 0)
+        {
         TurnRight();
       }
       if(Input.GetKey(KeyCode.Space)){
