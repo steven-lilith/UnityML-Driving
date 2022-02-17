@@ -13,6 +13,32 @@ public class CarAgent : Agent
     }
     public override void OnActionReceived(ActionBuffers actions)
     {
+        //float forwardAmount = 0f;
+        //float turnAmount = 0f;
+        //switch(actions.DiscreteActions[0])
+        //{
+        //    case 0:forwardAmount = 0f;
+        //        break;
+        //    case 1:
+        //        forwardAmount = +1f;
+        //        break;
+        //    case 2:
+        //        forwardAmount = -1f;
+        //        break;
+        //}
+        //switch (actions.DiscreteActions[1])
+        //{
+        //    case 0:
+        //        turnAmount = 0f;
+        //        break;
+        //    case 1:
+        //        turnAmount = +1f;
+        //        break;
+        //    case 2:
+        //        turnAmount = -1f;
+        //        break;
+        //}
+
         float moveX = actions.ContinuousActions[0];
         float moveZ = actions.ContinuousActions[1];
 
@@ -29,7 +55,7 @@ public class CarAgent : Agent
         ActionSegment<float> continuousAction = actionsOut.ContinuousActions;
         continuousAction[0] = Input.GetAxisRaw("Horizontal");
         continuousAction[1] = Input.GetAxisRaw("Vertical");
-  
+
     }
     private void OnTriggerEnter(Collider2D collision)
     {
