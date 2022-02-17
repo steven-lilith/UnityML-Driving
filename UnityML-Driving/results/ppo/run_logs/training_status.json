@@ -2,6 +2,6 @@
     "metadata": {
         "stats_format_version": "0.3.0",
         "mlagents_version": "0.28.0",
-        "torch_version": "1.10.2+cu113"
+        "torch_version": "1.7.0+cu110"
     }
 }
