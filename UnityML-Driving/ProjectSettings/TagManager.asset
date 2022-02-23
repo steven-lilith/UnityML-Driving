@@ -7,6 +7,30 @@ TagManager:
   - Wall
   - Car
   - ParkSpot
+  - target
+  - ground
+  - agent
+  - ball
+  - iWall
+  - symbol_O_Goal
+  - symbol_X
+  - wall
+  - symbol_X_Goal
+  - symbol_O
+  - goal
+  - block
+  - walkableSurface
+  - purpleAgent
+  - purpleGoal
+  - blueAgent
+  - blueGoal
+  - switchOff
+  - pyramid
+  - stone
+  - badFood
+  - food
+  - pit
+  - KillZone
   layers:
   - Default
   - TransparentFX
