@@ -11,6 +11,7 @@ public class CheckpointSingle : MonoBehaviour
         if (other.TryGetComponent<PrometeoCarController>(out PrometeoCarController carController))
         {
             trackCheckpoints.GoThroughCheckPoint(this);
+            Debug.Log("check point hits!");
         }
     }
     public void SetTrackCheckpoints(TrackCheckpoints trackCheckpoints)
