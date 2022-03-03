@@ -12,6 +12,8 @@ public class DrivingAgent : Agent
     [SerializeField]
     private Transform InitialTransform;
     [SerializeField]
+    private TrackCheckpoints trackCheckpoints;
+    [SerializeField]
     private Transform Target;
     private void Awake()
     {
@@ -97,6 +99,22 @@ public class DrivingAgent : Agent
         discrettActions[1] = turn;
 
     }
+    private void OnCollisionEnter(Collision collision) //first collsion first happen
+    {
+        if (collision.gameObject.TryGetComponent<Wall>(out Wall wall))
+        {
+            Debug.Log("collided");
+            AddReward(-1f);
+        }
+    }
+    private void OnCollisionStay(Collision collision) //trigger if collsion keeps happening
+    {
+        if (collision.gameObject.TryGetComponent<Wall>(out Wall wall))
+        {
+            Debug.Log("scratched");
+            AddReward(-0.5f);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -107,4 +125,5 @@ public class DrivingAgent : Agent
             EndEpisode();
         }
     }
+    
 }

@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.MLAgents;
 using UnityEngine;
 
-public class TrackCheckpoints : MonoBehaviour {
+public class TrackCheckpoints : Agent {
 
     private List<CheckpointSingle> checkpointSinglesList;
     private int nextIndex;
+    public event EventHandler onEnterCorrectCheckPoint;
+    public event EventHandler onEnterWrongCheckPoint;
+
     private void Awake()
     {
         Transform checkpointTransform = transform.Find("CheckPoints");
@@ -25,12 +29,16 @@ public class TrackCheckpoints : MonoBehaviour {
         if(checkpointSinglesList.IndexOf(checkpointSingle)==nextIndex)
         {
             Debug.Log("correct");
+            AddReward(+1f);
             nextIndex = (nextIndex + 1) % checkpointSinglesList.Count; //make sure all the check points are available for the second lap
+            onEnterCorrectCheckPoint?.Invoke(this, EventArgs.Empty);
         }
         //if yes, then addreward(-1f)
         else
         {
+            AddReward(-1f);
             Debug.Log("wrong");
+            onEnterWrongCheckPoint?.Invoke(this, EventArgs.Empty);
         }
     }
 
