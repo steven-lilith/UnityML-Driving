@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckpointSingle : MonoBehaviour {
+public class CheckpointSingle : MonoBehaviour 
+{
 
     private TrackCheckpoints trackCheckpoints;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<CarController>(out CarController carController))
+        if (other.TryGetComponent<PrometeoCarController>(out PrometeoCarController carController))
         {
-            Debug.Log("checked");
+            trackCheckpoints.GoThroughCheckPoint(this);
+            Debug.Log("check point hits!");
         }
     }
     public void SetTrackCheckpoints(TrackCheckpoints trackCheckpoints)
