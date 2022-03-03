@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.MLAgents;
 using UnityEngine;
 
-public class TrackCheckpoints : Agent {
-
-    private List<CheckpointSingle> checkpointSinglesList;
-    private int nextIndex;
-    public event EventHandler onEnterCorrectCheckPoint;
-    public event EventHandler onEnterWrongCheckPoint;
-
+public class TrackCheckpoints : MonoBehaviour {
+    [SerializeField]
+    public List<CheckpointSingle> checkpointSinglesList;
+    [SerializeField]
+    private List<GameObject> track;
+    public int nextIndex;
     private void Awake()
     {
-        Transform checkpointTransform = transform.Find("CheckPoints");
+        /*Transform checkpointTransform = transform.Find("CheckPoints");
         checkpointSinglesList = new List<CheckpointSingle>();
         //check the check points within the list in correct order
         foreach (Transform checkpointSingleTransform in checkpointTransform)
@@ -21,7 +19,14 @@ public class TrackCheckpoints : Agent {
             CheckpointSingle checkpointSingle = checkpointSingleTransform.GetComponent<CheckpointSingle>();
             checkpointSingle.SetTrackCheckpoints(this);
             checkpointSinglesList.Add(checkpointSingle);
+        }*/
+        nextIndex = 0;
+        for(int i =0;i<track.Count;++i)
+        {
+            CheckpointSingle checkpoint = track[i].GetComponentInChildren<CheckpointSingle>();
+            checkpointSinglesList.Add(checkpoint);
         }
+        
     }
     public void GoThroughCheckPoint(CheckpointSingle checkpointSingle)
     {
@@ -29,16 +34,12 @@ public class TrackCheckpoints : Agent {
         if(checkpointSinglesList.IndexOf(checkpointSingle)==nextIndex)
         {
             Debug.Log("correct");
-            AddReward(+1f);
             nextIndex = (nextIndex + 1) % checkpointSinglesList.Count; //make sure all the check points are available for the second lap
-            onEnterCorrectCheckPoint?.Invoke(this, EventArgs.Empty);
         }
         //if yes, then addreward(-1f)
         else
         {
-            AddReward(-1f);
             Debug.Log("wrong");
-            onEnterWrongCheckPoint?.Invoke(this, EventArgs.Empty);
         }
     }
 

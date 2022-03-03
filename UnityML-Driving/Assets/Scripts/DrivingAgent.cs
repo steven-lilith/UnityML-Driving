@@ -11,18 +11,18 @@ public class DrivingAgent : Agent
     private PrometeoCarController car;
     [SerializeField]
     private Transform InitialTransform;
-    [SerializeField]
-    private TrackCheckpoints trackCheckpoints;
-    [SerializeField]
     private Transform Target;
+    [SerializeField]
+    private TrackCheckpoints checkpoints;
     private void Awake()
     {
         car = GetComponent<PrometeoCarController>();
     }
     public void Start()
     {
-       //InitialTransform = transform;
-        
+        //InitialTransform = transform;
+        //Target = checkpoints.checkpointSinglesList[checkpoints.nextIndex].transform;
+
     }
     public override void OnEpisodeBegin()
     {
@@ -34,13 +34,16 @@ public class DrivingAgent : Agent
     {
         //float direction = Vector3.Dot(transform.forward, new Vector3(15, 11.83f, 91.57f));
         //sensor.AddObservation(transform.position);
-        sensor.AddObservation(Target.position);
+        for(int i =0;i<checkpoints.checkpointSinglesList.Count;++i)
+        {
+            sensor.AddObservation(checkpoints.checkpointSinglesList[i].transform);
+        }
     }
     public override void OnActionReceived(ActionBuffers actions)
     {
-        float forward = 0.0f;
-        float turn = 0.0f;
-        switch (actions.DiscreteActions[0])
+        //float forward = 0.0f;
+        //float turn = 0.0f;
+        /*switch (actions.DiscreteActions[0])
         {
             case 0:
                 forward = 0.0f;
@@ -67,12 +70,15 @@ public class DrivingAgent : Agent
                 break;
             default:
                 break;
-        }
+        }*/
+        float forward = actions.ContinuousActions[0];
+        float turn = actions.ContinuousActions[1];
         car.Accel(forward);
+        car.turn(turn);
         AddReward(0.1f);
     }
 
-    public override void Heuristic(in ActionBuffers actionsOut)
+    /*public override void Heuristic(in ActionBuffers actionsOut)
     {
 
         int forward = 0;
@@ -98,23 +104,7 @@ public class DrivingAgent : Agent
         discrettActions[0] = forward;
         discrettActions[1] = turn;
 
-    }
-    private void OnCollisionEnter(Collision collision) //first collsion first happen
-    {
-        if (collision.gameObject.TryGetComponent<Wall>(out Wall wall))
-        {
-            Debug.Log("collided");
-            AddReward(-1f);
-        }
-    }
-    private void OnCollisionStay(Collision collision) //trigger if collsion keeps happening
-    {
-        if (collision.gameObject.TryGetComponent<Wall>(out Wall wall))
-        {
-            Debug.Log("scratched");
-            AddReward(-0.5f);
-        }
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
@@ -124,6 +114,9 @@ public class DrivingAgent : Agent
             //Destroy(gameObject);
             EndEpisode();
         }
+        if(other.gameObject.CompareTag("CheckPoint"))
+        {
+            AddReward(10.0f);
+        }
     }
-    
 }
