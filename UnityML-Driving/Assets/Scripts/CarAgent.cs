@@ -42,6 +42,7 @@ public class CarAgent : Agent
         {
             SetReward(-1f);
             EndEpisode();
+            
         }
     }
     //private CarController carController;
