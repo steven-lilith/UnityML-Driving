@@ -36,9 +36,9 @@ public class DrivingAgent : Agent
     }
     public override void OnActionReceived(ActionBuffers actions)
     {
-        float forward = 0.0f;
-        float turn = 0.0f;
-        switch (actions.DiscreteActions[0])
+        //float forward = 0.0f;
+        //float turn = 0.0f;
+        /*switch (actions.DiscreteActions[0])
         {
             case 0:
                 forward = 0.0f;
@@ -65,12 +65,15 @@ public class DrivingAgent : Agent
                 break;
             default:
                 break;
-        }
+        }*/
+        float forward = actions.ContinuousActions[0];
+        float turn = actions.ContinuousActions[1];
         car.Accel(forward);
+        car.turn(turn);
         AddReward(0.1f);
     }
 
-    public override void Heuristic(in ActionBuffers actionsOut)
+    /*public override void Heuristic(in ActionBuffers actionsOut)
     {
 
         int forward = 0;
@@ -96,7 +99,7 @@ public class DrivingAgent : Agent
         discrettActions[0] = forward;
         discrettActions[1] = turn;
 
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
