@@ -10,7 +10,7 @@ public class CheckpointSingle : MonoBehaviour
     {
         if (other.TryGetComponent<PrometeoCarController>(out PrometeoCarController carController))
         {
-            trackCheckpoints.GoThroughCheckPoint(this);
+            //trackCheckpoints.GoThroughCheckPoint(this);
             Debug.Log("check point hits!");
         }
     }

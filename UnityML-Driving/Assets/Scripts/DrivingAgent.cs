@@ -11,16 +11,18 @@ public class DrivingAgent : Agent
     private PrometeoCarController car;
     [SerializeField]
     private Transform InitialTransform;
-    [SerializeField]
     private Transform Target;
+    [SerializeField]
+    private TrackCheckpoints checkpoints;
     private void Awake()
     {
         car = GetComponent<PrometeoCarController>();
     }
     public void Start()
     {
-       //InitialTransform = transform;
-        
+        //InitialTransform = transform;
+        //Target = checkpoints.checkpointSinglesList[checkpoints.nextIndex].transform;
+
     }
     public override void OnEpisodeBegin()
     {
@@ -32,7 +34,10 @@ public class DrivingAgent : Agent
     {
         //float direction = Vector3.Dot(transform.forward, new Vector3(15, 11.83f, 91.57f));
         //sensor.AddObservation(transform.position);
-        sensor.AddObservation(Target.position);
+        for(int i =0;i<checkpoints.checkpointSinglesList.Count;++i)
+        {
+            sensor.AddObservation(checkpoints.checkpointSinglesList[i].transform);
+        }
     }
     public override void OnActionReceived(ActionBuffers actions)
     {
@@ -108,6 +113,10 @@ public class DrivingAgent : Agent
             SetReward(0f);
             //Destroy(gameObject);
             EndEpisode();
+        }
+        if(other.gameObject.CompareTag("CheckPoint"))
+        {
+            AddReward(10.0f);
         }
     }
 }
