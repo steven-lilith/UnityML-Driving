@@ -31,11 +31,12 @@ TagManager:
   - food
   - pit
   - KillZone
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Car
   - Water
   - UI
   - 
