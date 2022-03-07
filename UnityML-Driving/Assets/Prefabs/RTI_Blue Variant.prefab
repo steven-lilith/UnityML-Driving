@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1041757653980287782}
   - component: {fileID: 3160067777505052664}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FRWCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,6 +90,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.11, y: 1, z: 4.37}
   m_Center: {x: 0, y: 0.73, z: 0}
+--- !u!114 &1575907495146029652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6760337732974531999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4c7dcf288ae8a4fbcf9c4e130a61a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  InitialTransform: {fileID: 0}
+  checkpoints: {fileID: 0}
 --- !u!114 &3823727087372243672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,22 +173,6 @@ MonoBehaviour:
   m_UseChildSensors: 1
   m_UseChildActuators: 1
   m_ObservableAttributeHandling: 0
---- !u!114 &1575907495146029652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6760337732974531999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a4c7dcf288ae8a4fbcf9c4e130a61a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentParameters:
-    maxStep: 0
-  hasUpgradedFromAgentParameters: 1
-  MaxStep: 0
 --- !u!1 &2526130835430680921
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3559441603104847489}
   - component: {fileID: 2909956042940617390}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 'FLWCollider '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1755526155966697722}
   - component: {fileID: 6075134334774305294}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 'RRWCollider '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3407200827206438329}
   - component: {fileID: 4481381201492048569}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RLWCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4320233507556756169}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,6 +397,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1470927456858953956, guid: 9d71ac273b96d3a4dad4d3d045e12374, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914881670334967342, guid: 9d71ac273b96d3a4dad4d3d045e12374, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715084722722868515, guid: 9d71ac273b96d3a4dad4d3d045e12374, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5317912085697310436, guid: 9d71ac273b96d3a4dad4d3d045e12374, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -423,9 +437,33 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5442850419004542078, guid: 9d71ac273b96d3a4dad4d3d045e12374, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952494338207546525, guid: 9d71ac273b96d3a4dad4d3d045e12374, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076534231565092832, guid: 9d71ac273b96d3a4dad4d3d045e12374, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400947961051711059, guid: 9d71ac273b96d3a4dad4d3d045e12374, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9193637965935959287, guid: 9d71ac273b96d3a4dad4d3d045e12374, type: 3}
       propertyPath: m_Name
       value: RTI_Blue Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193637965935959287, guid: 9d71ac273b96d3a4dad4d3d045e12374, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193637965935959287, guid: 9d71ac273b96d3a4dad4d3d045e12374, type: 3}
+      propertyPath: m_TagString
+      value: Car
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d71ac273b96d3a4dad4d3d045e12374, type: 3}

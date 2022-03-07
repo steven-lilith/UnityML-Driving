@@ -22,6 +22,8 @@ public class DrivingAgent : Agent
     {
         //InitialTransform = transform;
         //Target = checkpoints.checkpointSinglesList[checkpoints.nextIndex].transform;
+        checkpoints.onCarCorrecCheckPoint += CheckPoint_Correct;
+        checkpoints.onCarWrongCheckPointl += CheckPoint_Wrong;
 
     }
     public override void OnEpisodeBegin()
@@ -112,9 +114,13 @@ public class DrivingAgent : Agent
             //Destroy(gameObject);
             EndEpisode();
         }
-        if(other.gameObject.CompareTag("CheckPoint"))
-        {
-            AddReward(10.0f);
-        }
+    }
+    private void CheckPoint_Correct()
+    {
+        AddReward(10.0f);
+    }
+    private void CheckPoint_Wrong()
+    {
+        AddReward(-20.0f);
     }
 }
