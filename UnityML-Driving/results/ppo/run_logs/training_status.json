@@ -2,22 +2,22 @@
     "Driving": {
         "checkpoints": [
             {
-                "steps": 1216,
-                "file_path": "results\\ppo\\Driving\\Driving-1216.onnx",
+                "steps": 9344,
+                "file_path": "results\\ppo\\Driving\\Driving-9344.onnx",
                 "reward": null,
-                "creation_time": 1646364625.7800584,
+                "creation_time": 1646683616.9928756,
                 "auxillary_file_paths": [
-                    "results\\ppo\\Driving\\Driving-1216.pt"
+                    "results\\ppo\\Driving\\Driving-9344.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 1216,
+            "steps": 9344,
             "file_path": "results\\ppo\\Driving.onnx",
             "reward": null,
-            "creation_time": 1646364625.7800584,
+            "creation_time": 1646683616.9928756,
             "auxillary_file_paths": [
-                "results\\ppo\\Driving\\Driving-1216.pt"
+                "results\\ppo\\Driving\\Driving-9344.pt"
             ]
         }
     },
