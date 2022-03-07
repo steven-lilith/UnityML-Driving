@@ -31,6 +31,7 @@ TagManager:
   - food
   - pit
   - KillZone
+  - CheckPoint
   layers:
   - Default
   - TransparentFX

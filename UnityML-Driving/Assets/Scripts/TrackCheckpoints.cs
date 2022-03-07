@@ -34,11 +34,13 @@ public class TrackCheckpoints : MonoBehaviour {
         if(checkpointSinglesList.IndexOf(checkpointSingle)==nextIndex)
         {
             Debug.Log("correct");
+           
             nextIndex = (nextIndex + 1) % checkpointSinglesList.Count; //make sure all the check points are available for the second lap
         }
         //if yes, then addreward(-1f)
         else
         {
+   
             Debug.Log("wrong");
         }
     }

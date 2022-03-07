@@ -28,8 +28,6 @@ public class DrivingAgent : Agent
     {
         transform.position = InitialTransform.position;
     }
-
-    
     public override void CollectObservations(VectorSensor sensor)
     {
         //float direction = Vector3.Dot(transform.forward, new Vector3(15, 11.83f, 91.57f));
@@ -39,6 +37,7 @@ public class DrivingAgent : Agent
             sensor.AddObservation(checkpoints.checkpointSinglesList[i].transform);
         }
     }
+
     public override void OnActionReceived(ActionBuffers actions)
     {
         //float forward = 0.0f;
@@ -78,12 +77,12 @@ public class DrivingAgent : Agent
         AddReward(0.1f);
     }
 
-    /*public override void Heuristic(in ActionBuffers actionsOut)
+    public override void Heuristic(in ActionBuffers actionsOut)
     {
 
         int forward = 0;
         int turn = 0;
-        if(Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
             forward = 1;
         }
@@ -99,13 +98,12 @@ public class DrivingAgent : Agent
         {
             turn = 1;
         }
-        ActionSegment<int> discrettActions = actionsOut.DiscreteActions;
+        ActionSegment<float> continuousActions = actionsOut.ContinuousActions;
 
-        discrettActions[0] = forward;
-        discrettActions[1] = turn;
+        continuousActions[0] = forward;
+        continuousActions[1] = turn;
 
-    }*/
-
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("KillZone"))

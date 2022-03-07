@@ -2,28 +2,28 @@
     "Driving": {
         "checkpoints": [
             {
-                "steps": 7040,
-                "file_path": "results\\ppo\\Driving\\Driving-7040.onnx",
+                "steps": 1216,
+                "file_path": "results\\ppo\\Driving\\Driving-1216.onnx",
                 "reward": null,
-                "creation_time": 1645154809.2719214,
+                "creation_time": 1646364625.7800584,
                 "auxillary_file_paths": [
-                    "results\\ppo\\Driving\\Driving-7040.pt"
+                    "results\\ppo\\Driving\\Driving-1216.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 7040,
+            "steps": 1216,
             "file_path": "results\\ppo\\Driving.onnx",
             "reward": null,
-            "creation_time": 1645154809.2719214,
+            "creation_time": 1646364625.7800584,
             "auxillary_file_paths": [
-                "results\\ppo\\Driving\\Driving-7040.pt"
+                "results\\ppo\\Driving\\Driving-1216.pt"
             ]
         }
     },
     "metadata": {
         "stats_format_version": "0.3.0",
         "mlagents_version": "0.28.0",
-        "torch_version": "1.7.0+cu110"
+        "torch_version": "1.10.2+cu113"
     }
 }
