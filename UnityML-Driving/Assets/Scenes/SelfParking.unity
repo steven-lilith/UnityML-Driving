@@ -123,22 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &336188416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 336188423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64ffbc4991509c34cbf54b9ba1a082a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Car: {fileID: 3009716533214310081}
-  CarX: 0
-  CarY: 0
-  CarZ: 0
 --- !u!20 &336188418
 Camera:
   m_ObjectHideFlags: 0
@@ -196,21 +180,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 27.344, y: -91.854, z: -2.331}
---- !u!114 &336188420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 336188423}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6d3ff905719c845a4a6404bc4d4162, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carTransform: {fileID: 2278804804074282194}
-  followSpeed: 2
-  lookSpeed: 5
 --- !u!81 &336188421
 AudioListener:
   m_ObjectHideFlags: 0
@@ -230,8 +199,6 @@ GameObject:
   - component: {fileID: 336188419}
   - component: {fileID: 336188418}
   - component: {fileID: 336188421}
-  - component: {fileID: 336188420}
-  - component: {fileID: 336188416}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
