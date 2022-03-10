@@ -14,6 +14,9 @@ public class DrivingAgent : Agent
     private Transform Target;
     [SerializeField]
     private TrackCheckpoints checkpoints;
+    [SerializeField]
+    private int maxCollisionCount;
+    private int currentCollisionCount;
     private void Awake()
     {
         car = GetComponent<PrometeoCarController>();
@@ -29,15 +32,21 @@ public class DrivingAgent : Agent
     public override void OnEpisodeBegin()
     {
         transform.position = InitialTransform.position;
+        checkpoints.nextIndex = 0;
+        currentCollisionCount = 0;
     }
     public override void CollectObservations(VectorSensor sensor)
     {
         //float direction = Vector3.Dot(transform.forward, new Vector3(15, 11.83f, 91.57f));
         //sensor.AddObservation(transform.position);
-        for(int i =0;i<checkpoints.checkpointSinglesList.Count;++i)
-        {
-            sensor.AddObservation(checkpoints.checkpointSinglesList[i].transform);
-        }
+        //for(int i =0;i<checkpoints.checkpointSinglesList.Count;++i)
+        //{
+        //    sensor.AddObservation(checkpoints.checkpointSinglesList[i].transform);
+        //}
+       
+        Vector3 diff = checkpoints.nextCheckPoint.transform.position;
+        sensor.AddObservation(diff);
+        
     }
 
     public override void OnActionReceived(ActionBuffers actions)
@@ -76,7 +85,11 @@ public class DrivingAgent : Agent
         float turn = actions.ContinuousActions[1];
         car.Accel(forward);
         car.turn(turn);
-        AddReward(0.1f);
+        AddReward(0.0001f * gameObject.GetComponent<Rigidbody>().velocity.magnitude);
+        if(currentCollisionCount==maxCollisionCount)
+        {
+            EndEpisode();
+        }
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
@@ -115,6 +128,22 @@ public class DrivingAgent : Agent
             EndEpisode();
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("wall"))
+        {
+            AddReward(-10.0f);
+            currentCollisionCount++;
+        }
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("wall"))
+        {
+            AddReward(-10.0f);
+            currentCollisionCount++;
+        }
+    }
     private void CheckPoint_Correct()
     {
         AddReward(10.0f);
@@ -122,5 +151,6 @@ public class DrivingAgent : Agent
     private void CheckPoint_Wrong()
     {
         AddReward(-20.0f);
+        EndEpisode();
     }
 }
