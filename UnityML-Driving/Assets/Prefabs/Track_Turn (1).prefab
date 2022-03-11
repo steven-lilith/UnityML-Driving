@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 8326622836581167235}
   - component: {fileID: 8326622836581167234}
   - component: {fileID: 8326622836581167245}
+  - component: {fileID: 6317432350013389198}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (6)
   m_TagString: wall
@@ -213,14 +214,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622836581167232}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6317432350013389198
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622836581167232}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000027, y: 1.2000002, z: 1.5000012}
+  m_Center: {x: -0.0000010728836, y: 0.6000001, z: -0.0000019073486}
 --- !u!1 &8326622836627242049
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +248,7 @@ GameObject:
   - component: {fileID: 8326622836627242060}
   - component: {fileID: 8326622836627242051}
   - component: {fileID: 8326622836627242062}
+  - component: {fileID: 1254797773658859495}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (7)
   m_TagString: wall
@@ -326,14 +341,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622836627242049}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1254797773658859495
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622836627242049}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000027, y: 1.2000002, z: 1.500001}
+  m_Center: {x: -0.00000047683716, y: 0.6000001, z: 0}
 --- !u!1 &8326622836755117800
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +483,7 @@ GameObject:
   - component: {fileID: 8326622836755265389}
   - component: {fileID: 8326622836755265388}
   - component: {fileID: 8326622836755265391}
+  - component: {fileID: 2820233863892538372}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (1)
   m_TagString: wall
@@ -547,14 +576,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622836755265378}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2820233863892538372
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622836755265378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000033, y: 1.2000002, z: 1.5000013}
+  m_Center: {x: 0, y: 0.6000001, z: -0.0000009536743}
 --- !u!1 &8326622836805333547
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +610,7 @@ GameObject:
   - component: {fileID: 8326622836805333590}
   - component: {fileID: 8326622836805333589}
   - component: {fileID: 8326622836805333584}
+  - component: {fileID: 5679926783318691390}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (2)
   m_TagString: wall
@@ -660,14 +703,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622836805333547}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &5679926783318691390
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622836805333547}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000018, y: 1.2000002, z: 1.5000008}
+  m_Center: {x: 0.0000009536743, y: 0.6000001, z: 0}
 --- !u!1 &8326622836868656576
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,6 +737,7 @@ GameObject:
   - component: {fileID: 8326622836868656579}
   - component: {fileID: 8326622836868656578}
   - component: {fileID: 8326622836868656589}
+  - component: {fileID: 8081445141333480789}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (14)
   m_TagString: wall
@@ -773,14 +830,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622836868656576}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &8081445141333480789
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622836868656576}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000027, y: 1.2000002, z: 1.500001}
+  m_Center: {x: 0, y: 0.6000001, z: 0.00000166893}
 --- !u!1 &8326622836947167622
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,6 +864,7 @@ GameObject:
   - component: {fileID: 8326622836947167617}
   - component: {fileID: 8326622836947167616}
   - component: {fileID: 8326622836947167619}
+  - component: {fileID: 1703243944110139868}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (11)
   m_TagString: wall
@@ -886,14 +957,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622836947167622}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1703243944110139868
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622836947167622}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4000003, y: 1.2000002, z: 1.500001}
+  m_Center: {x: 0, y: 0.6000001, z: -0.0000009536743}
 --- !u!1 &8326622837142739953
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +991,7 @@ GameObject:
   - component: {fileID: 8326622837142739964}
   - component: {fileID: 8326622837142739955}
   - component: {fileID: 8326622837142739966}
+  - component: {fileID: 5168029364826259882}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (15)
   m_TagString: wall
@@ -999,14 +1084,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622837142739953}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &5168029364826259882
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622837142739953}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000018, y: 1.2000002, z: 1.5000008}
+  m_Center: {x: -0.0000009536743, y: 0.6000001, z: 0.00000047683716}
 --- !u!1 &8326622837350709783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,6 +1118,7 @@ GameObject:
   - component: {fileID: 8326622837350709778}
   - component: {fileID: 8326622837350709777}
   - component: {fileID: 8326622837350709788}
+  - component: {fileID: 2869585215112949406}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (16)
   m_TagString: wall
@@ -1112,14 +1211,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622837350709783}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2869585215112949406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622837350709783}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000027, y: 1.2000002, z: 1.500001}
+  m_Center: {x: 0, y: 0.6000001, z: 0.0000009536743}
 --- !u!1 &8326622837465747946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,6 +1501,7 @@ GameObject:
   - component: {fileID: 8326622837872474955}
   - component: {fileID: 8326622837872474954}
   - component: {fileID: 8326622837872474997}
+  - component: {fileID: 977923319460678788}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (10)
   m_TagString: wall
@@ -1481,14 +1594,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622837872474952}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &977923319460678788
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622837872474952}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000015, y: 1.2000002, z: 1.5000005}
+  m_Center: {x: 0, y: 0.6000001, z: 0}
 --- !u!1 &8326622837948204544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,6 +1736,7 @@ GameObject:
   - component: {fileID: 8326622838018126229}
   - component: {fileID: 8326622838018126228}
   - component: {fileID: 8326622838018126231}
+  - component: {fileID: 3947794547002025752}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (9)
   m_TagString: wall
@@ -1702,14 +1829,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622838018126186}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &3947794547002025752
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622838018126186}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000033, y: 1.2000002, z: 1.5000013}
+  m_Center: {x: -0.00000047683716, y: 0.6000001, z: -0.0000009536743}
 --- !u!1 &8326622838095152266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,6 +1863,7 @@ GameObject:
   - component: {fileID: 8326622838095152309}
   - component: {fileID: 8326622838095152308}
   - component: {fileID: 8326622838095152311}
+  - component: {fileID: 7039578331971474612}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (3)
   m_TagString: wall
@@ -1815,14 +1956,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622838095152266}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &7039578331971474612
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622838095152266}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000018, y: 1.2000002, z: 1.5000008}
+  m_Center: {x: 0.0000009536743, y: 0.6000001, z: 0.00000047683716}
 --- !u!1 &8326622838327623117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1990,7 @@ GameObject:
   - component: {fileID: 8326622838327623112}
   - component: {fileID: 8326622838327623119}
   - component: {fileID: 8326622838327623114}
+  - component: {fileID: 4795235146461642596}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (4)
   m_TagString: wall
@@ -1928,14 +2083,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622838327623117}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &4795235146461642596
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622838327623117}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000013, y: 1.2000002, z: 1.5000002}
+  m_Center: {x: 0, y: 0.6000001, z: 0.0000009536743}
 --- !u!1 &8326622838331019374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1949,6 +2117,7 @@ GameObject:
   - component: {fileID: 8326622838331019369}
   - component: {fileID: 8326622838331019368}
   - component: {fileID: 8326622838331019371}
+  - component: {fileID: 8953929964672118355}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (8)
   m_TagString: wall
@@ -2041,14 +2210,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622838331019374}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &8953929964672118355
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622838331019374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000033, y: 1.2000002, z: 1.5000013}
+  m_Center: {x: -0.00000047683716, y: 0.6000001, z: -0.0000009536743}
 --- !u!1 &8326622838343131767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2062,6 +2244,7 @@ GameObject:
   - component: {fileID: 8326622838343131762}
   - component: {fileID: 8326622838343131761}
   - component: {fileID: 8326622838343131772}
+  - component: {fileID: 5893015979359876638}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (12)
   m_TagString: wall
@@ -2154,14 +2337,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622838343131767}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &5893015979359876638
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622838343131767}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000015, y: 1.2000002, z: 1.5000005}
+  m_Center: {x: -0.0000009536743, y: 0.6000001, z: 0.00000023841858}
 --- !u!1 &8326622838524068892
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,6 +2371,7 @@ GameObject:
   - component: {fileID: 8326622838524068895}
   - component: {fileID: 8326622838524068894}
   - component: {fileID: 8326622838524068889}
+  - component: {fileID: 8274537173131584173}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (5)
   m_TagString: wall
@@ -2267,14 +2464,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622838524068892}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &8274537173131584173
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622838524068892}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000033, y: 1.2000002, z: 1.5000013}
+  m_Center: {x: 0.0000009536743, y: 0.6000001, z: 0.0000014305115}
 --- !u!1 &8326622838565176382
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,6 +2498,7 @@ GameObject:
   - component: {fileID: 8326622838565176377}
   - component: {fileID: 8326622838565176376}
   - component: {fileID: 8326622838565176379}
+  - component: {fileID: 1027129016889487396}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs
   m_TagString: wall
@@ -2380,14 +2591,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622838565176382}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1027129016889487396
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622838565176382}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000027, y: 1.2000002, z: 1.5000012}
+  m_Center: {x: 0, y: 0.6000001, z: 0}
 --- !u!1 &8326622838577108758
 GameObject:
   m_ObjectHideFlags: 0
@@ -2401,6 +2625,7 @@ GameObject:
   - component: {fileID: 8326622838577108753}
   - component: {fileID: 8326622838577108752}
   - component: {fileID: 8326622838577108755}
+  - component: {fileID: 523831515313407745}
   m_Layer: 0
   m_Name: Track_Fence_line_type_01_red_block_1&5m_free_obs (13)
   m_TagString: wall
@@ -2493,11 +2718,24 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8326622838577108758}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 100000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &523831515313407745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326622838577108758}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40000024, y: 1.2000002, z: 1.5000008}
+  m_Center: {x: -0.0000019073486, y: 0.6000001, z: 0}

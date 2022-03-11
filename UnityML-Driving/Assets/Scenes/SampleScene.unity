@@ -4313,7 +4313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5446519472119125551, guid: d9a38c79bb6a9fc44a31f2621696b16e, type: 3}
       propertyPath: m_RayLength
-      value: 4
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5446519472119125551, guid: d9a38c79bb6a9fc44a31f2621696b16e, type: 3}
       propertyPath: m_DetectableTags.Array.size
