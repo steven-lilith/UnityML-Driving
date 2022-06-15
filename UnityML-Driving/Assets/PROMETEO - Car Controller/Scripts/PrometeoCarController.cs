@@ -192,12 +192,16 @@ public class PrometeoCarController : MonoBehaviour
         {
             CancelInvoke("DecelerateCar");
             deceleratingCar = false;
+            ResetSteeringAngle();
+
             GoForward();
         }
         if(forward<0)
         {
             CancelInvoke("DecelerateCar");
             deceleratingCar = false;
+            ResetSteeringAngle();
+
             GoReverse();
         }
         //Debug.Log(forward);
@@ -215,6 +219,7 @@ public class PrometeoCarController : MonoBehaviour
         {
             TurnRight();
         }
+        
     }
     // Update is called once per frame
     void Update()

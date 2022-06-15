@@ -1,0 +1,56 @@
+{
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.0+cu110"
+    },
+    "Driving": {
+        "checkpoints": [
+            {
+                "steps": 0,
+                "file_path": "results\\NewCar2\\Driving\\Driving-0.onnx",
+                "reward": null,
+                "creation_time": 1654668310.2081885,
+                "auxillary_file_paths": [
+                    "results\\NewCar2\\Driving\\Driving-0.pt"
+                ]
+            },
+            {
+                "steps": 5376,
+                "file_path": "results\\NewCar2\\Driving\\Driving-5376.onnx",
+                "reward": null,
+                "creation_time": 1654668495.1508555,
+                "auxillary_file_paths": [
+                    "results\\NewCar2\\Driving\\Driving-5376.pt"
+                ]
+            },
+            {
+                "steps": 6784,
+                "file_path": "results\\NewCar2\\Driving\\Driving-6784.onnx",
+                "reward": null,
+                "creation_time": 1654668572.2806973,
+                "auxillary_file_paths": [
+                    "results\\NewCar2\\Driving\\Driving-6784.pt"
+                ]
+            },
+            {
+                "steps": 11686,
+                "file_path": "results\\NewCar2\\Driving\\Driving-11686.onnx",
+                "reward": -7188.904702675839,
+                "creation_time": 1654668905.6139865,
+                "auxillary_file_paths": [
+                    "results\\NewCar2\\Driving\\Driving-11686.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 11686,
+            "file_path": "results\\NewCar2\\Driving.onnx",
+            "reward": -7188.904702675839,
+            "creation_time": 1654668905.6139865,
+            "auxillary_file_paths": [
+                "results\\NewCar2\\Driving\\Driving-11686.pt"
+            ]
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "Driving": {
+        "checkpoints": [
+            {
+                "steps": 4704,
+                "file_path": "results\\new\\Driving\\Driving-4704.onnx",
+                "reward": -19.786646140010635,
+                "creation_time": 1646366745.482969,
+                "auxillary_file_paths": [
+                    "results\\new\\Driving\\Driving-4704.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4704,
+            "file_path": "results\\new\\Driving.onnx",
+            "reward": -19.786646140010635,
+            "creation_time": 1646366745.482969,
+            "auxillary_file_paths": [
+                "results\\new\\Driving\\Driving-4704.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

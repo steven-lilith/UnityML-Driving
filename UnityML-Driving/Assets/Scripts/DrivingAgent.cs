@@ -32,6 +32,7 @@ public class DrivingAgent : Agent
     public override void OnEpisodeBegin()
     {
         transform.position = InitialTransform.position;
+        transform.forward = InitialTransform.forward;
         checkpoints.nextIndex = 0;
         currentCollisionCount = 0;
     }
@@ -45,58 +46,34 @@ public class DrivingAgent : Agent
         //{
         //    sensor.AddObservation(checkpoints.checkpointSinglesList[i].transform);
         //}
-       
-        Vector3 diff = checkpoints.nextCheckPoint.transform.position;
-        sensor.AddObservation(diff);
-        
+
+
+        Vector3 checkPointForward = checkpoints.nextCheckPoint.transform.forward;
+        float directionDot = Vector3.Dot(transform.forward, checkPointForward);
+        sensor.AddObservation(directionDot);
+
+        //AddReward(-0.01f);
     }
     public override void OnActionReceived(ActionBuffers actions)
     {
-        //float forward = 0.0f;
-        //float turn = 0.0f;
-        /*switch (actions.DiscreteActions[0])
-        {
-            case 0:
-                forward = 0.0f;
-                break;
-            case 1:
-                forward = 1.0f;
-                break;
-            case 2:
-                forward = -1.0f;
-                break;
-            default:
-                break;
-        }
-        switch (actions.DiscreteActions[1])
-        {
-            case 0:
-                turn = 0.0f;
-                break;
-            case 1:
-                turn = 1.0f;
-                break;
-            case 2:
-                turn = -1.0f;
-                break;
-            default:
-                break;
-        }*/
-        float forward = actions.ContinuousActions[0];
-        float turn = actions.ContinuousActions[1];
-        car.Accel(forward);
-        car.turn(turn);
-        AddReward(0.0001f * gameObject.GetComponent<Rigidbody>().velocity.magnitude);
+        var input = actions.ContinuousActions;
+
+        car.Accel(input[1]);
+        car.turn(input[0]);
+        /*AddReward(0.0001f * gameObject.GetComponent<Rigidbody>().velocity.magnitude);
         if(currentCollisionCount==maxCollisionCount)
         {
             EndEpisode();
-        }
+        }*/
+        Debug.Log(input[1]);
+        //Debug.Log(turn);
+
     }
 
-    /*public override void Heuristic(in ActionBuffers actionsOut)
+    public override void Heuristic(in ActionBuffers actionsOut)
     {
 
-        int forward = 0;
+        /*int forward = 0;
         int turn = 0;
         if(Input.GetKey(KeyCode.W))
         {
@@ -117,11 +94,14 @@ public class DrivingAgent : Agent
         ActionSegment<int> discrettActions = actionsOut.DiscreteActions;
 
         discrettActions[0] = forward;
-        discrettActions[1] = turn;
+        discrettActions[1] = turn;*/
+        var action = actionsOut.ContinuousActions;
+        action[0] = Input.GetAxisRaw("Horizontal");
+        action[1] = Input.GetAxisRaw("Vertical");
 
-    }*/
+    }
 
-    private void OnTriggerEnter(Collider other)
+   /* private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("KillZone"))
         {
@@ -129,7 +109,7 @@ public class DrivingAgent : Agent
             //Destroy(gameObject);
             EndEpisode();
         }
-    }
+    }*/
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("wall"))
@@ -148,11 +128,11 @@ public class DrivingAgent : Agent
     }
     private void CheckPoint_Correct()
     {
-        AddReward(10.0f);
+        AddReward(100.0f);
     }
     private void CheckPoint_Wrong()
     {
-        AddReward(-20.0f);
+        AddReward(-200.0f);
         EndEpisode();
     }
 }

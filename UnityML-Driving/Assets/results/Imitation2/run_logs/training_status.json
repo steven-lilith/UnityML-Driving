@@ -1,0 +1,29 @@
+{
+    "Driving": {
+        "checkpoints": [
+            {
+                "steps": 4037,
+                "file_path": "results\\Imitation2\\Driving\\Driving-4037.onnx",
+                "reward": null,
+                "creation_time": 1654674818.9494793,
+                "auxillary_file_paths": [
+                    "results\\Imitation2\\Driving\\Driving-4037.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4037,
+            "file_path": "results\\Imitation2\\Driving.onnx",
+            "reward": null,
+            "creation_time": 1654674818.9494793,
+            "auxillary_file_paths": [
+                "results\\Imitation2\\Driving\\Driving-4037.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}
